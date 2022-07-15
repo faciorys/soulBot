@@ -14,10 +14,6 @@
     <name>soulBot</name>
     <description>soulBot</description>
     <properties>
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
         <java.version>11</java.version>
     </properties>
     <dependencies>
