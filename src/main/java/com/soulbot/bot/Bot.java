@@ -34,6 +34,15 @@ public class Bot {
         bot.setUpdatesListener(updates -> {
             updates.forEach(this::process);
             return UpdatesListener.CONFIRMED_UPDATES_ALL;
+        }, e -> {
+            if (e.response() != null) {
+                // god bad response from telegram
+                e.response().errorCode();
+                e.response().description();
+            } else {
+                // probably network error
+                e.printStackTrace();
+            }
         });
     }
 
