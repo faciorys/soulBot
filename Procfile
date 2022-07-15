@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT $JAVA_OPTS -jar target/*.jar
+web: gunicorn wsgi:app java -Dserver.port=$PORT $JAVA_OPTS -jar target/*.jar
